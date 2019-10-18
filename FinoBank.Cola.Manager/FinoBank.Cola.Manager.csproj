@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!--/-:cnd-->
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="QuerySampleManagerService.cs~RF1e8ffc2f.TMP" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.2.0" />
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="FluentValidation" Version="8.0.100" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Abstractions" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinoBank.Cola.Repository\FinoBank.Cola.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Contesto.V2.Core.Common.Manager">
+      <HintPath>..\packages\contesto.v2.core.common.manager\2.0.1\lib\netstandard2.0\Contesto.V2.Core.Common.Manager.dll</HintPath>
+    </Reference>
+    <Reference Include="Contesto.V2.Core.Common.Utility">
+      <HintPath>..\packages\contesto.v2.core.common.utility\2.0.1\lib\netstandard2.0\Contesto.V2.Core.Common.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Contesto.V2.Core.Common.ViewModel">
+      <HintPath>..\packages\contesto.v2.core.common.viewmodel\2.0.1\lib\netstandard2.0\Contesto.V2.Core.Common.ViewModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Contesto.V2.Core.Infrastructure.ConfigurationService">
+      <HintPath>..\packages\contesto.v2.core.infrastructure.configurationservice\2.0.1\lib\netstandard2.0\Contesto.V2.Core.Infrastructure.ConfigurationService.dll</HintPath>
+    </Reference>
+    <Reference Include="Contesto.V2.Core.Infrastructure.Data">
+      <HintPath>..\packages\contesto.v2.core.infrastructure.data\2.0.0\lib\netstandard2.0\Contesto.V2.Core.Infrastructure.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

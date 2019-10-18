@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>2.0.0</Version>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Authors>Dhiraj Gupta</Authors>
+    <Company>Fulcrum Worldwide</Company>
+    <Description />
+    <Copyright>Fulcrum Worldwide</Copyright>
+    <PackageProjectUrl>https://git.fulcrumww.com/root/ContestoEnterpriseLibraries_V2/tree/master/Contesto.V2.Core.Infrastructures.Data</PackageProjectUrl>
+    <RepositoryUrl>https://git.fulcrumww.com/root/ContestoEnterpriseLibraries_V2/tree/master/Contesto.V2.Core.Infrastructures.Data</RepositoryUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard2.0\CaseManagement.Core.Infrastructure.Data.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.5" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.5.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+</Project>

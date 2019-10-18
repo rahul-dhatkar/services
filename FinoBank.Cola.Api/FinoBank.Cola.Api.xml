@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<doc>
+	<assembly>
+		<name>FinoBank.Cola.Api</name>
+	</assembly>
+	<members>
+		<member name="T:FinoBank.Cola.Api.Controllers.ConfigurationSettingController">
+			<summary>
+				Configuration Setting Controller
+			</summary>
+			<seealso cref="T:Contesto.V2.Core.Common.Api.Base.BaseApiController" />
+			<seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+		</member>
+		<member name="M:FinoBank.Cola.Api.Controllers.ConfigurationSettingController.Get(System.String)">
+			<summary>
+				Gets Method.
+			</summary>
+			<returns></returns>
+		</member>
+		<member name="M:FinoBank.Cola.Api.Controllers.ConfigurationSettingController.Get(System.String,System.String)">
+			<summary>
+				Gets Method.
+			</summary>
+			<returns></returns>
+		</member>
+		<member name="M:FinoBank.Cola.Api.Controllers.ConfigurationSettingController.Put(System.String,FinoBank.Cola.Manager.ViewModels.ConfigurationSettingViewModel)">
+			<summary>
+				Puts the specified model.
+			</summary>
+			<param name="environment">The environment.</param>
+			<param name="model">The model.</param>
+		</member>
+		<member name="T:FinoBank.Cola.Api.Controllers.LoggerServiceController">
+			<summary>
+				CcnfigurationService Controller
+			</summary>
+			<seealso cref="T:Microsoft.AspNetCore.Mvc.Controller" />
+		</member>
+		<member name="M:FinoBank.Cola.Api.Controllers.LoggerServiceController.#ctor(Microsoft.Extensions.Logging.ILogger{FinoBank.Cola.Api.Controllers.LoggerServiceController})">
+			<summary>
+				Initializes a new instance of the <see cref="T:FinoBank.Cola.Api.Controllers.LoggerServiceController" /> class.
+			</summary>
+			<param name="logger">The logger.</param>
+		</member>
+		<member name="M:FinoBank.Cola.Api.Controllers.LoggerServiceController.Get(System.String)">
+			<summary>
+				Gets this instance.
+			</summary>
+			<returns></returns>
+		</member>
+		<member name="M:FinoBank.Cola.Api.Controllers.LoggerServiceController.Post(System.String,FinoBank.Cola.Manager.ViewModels.LoggerViewModel)">
+			<summary>
+				Posts the specified model.
+			</summary>
+			<param name="environment">The environment.</param>
+			<param name="model">The model.</param>
+		</member>
+		<member name="T:FinoBank.Cola.Api.Controllers.MerchantController">
+			<summary>
+				Merchant Controller
+			</summary>
+			<seealso cref="T:Contesto.V2.Core.Common.Api.Base.BaseApiController" />
+			<seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+		</member>
+		<member name="M:FinoBank.Cola.Api.Controllers.MerchantController.GetAll(FinoBank.Cola.Manager.ViewModels.MerchantSummaryRequestViewModel)">
+			<summary>
+				Gets all.
+			</summary>
+			<returns></returns>
+		</member>
+		<member name="M:FinoBank.Cola.Api.Controllers.MerchantController.Get(System.Int32)">
+			<summary>
+				Gets the specified identifier.
+			</summary>
+			<param name="id">The identifier.</param>
+			<returns></returns>
+		</member>
+		<member name="M:FinoBank.Cola.Api.Controllers.MerchantController.Post(FinoBank.Cola.Manager.ViewModels.MerchantViewModel)">
+			<summary>
+				Posts the specified model.
+			</summary>
+			<param name="model">The model.</param>
+		</member>
+		<member name="M:FinoBank.Cola.Api.Controllers.MerchantController.Put(System.Int32,FinoBank.Cola.Manager.ViewModels.MerchantViewModel)">
+			<summary>
+				Puts the specified identifier.
+			</summary>
+			<param name="id">The identifier.</param>
+			<param name="model">The model.</param>
+		</member>
+		<member name="M:FinoBank.Cola.Api.Controllers.MerchantController.UpdateMerchantSetup(System.Int32,FinoBank.Cola.Manager.ViewModels.MerchantSetupViewModel)">
+			<summary>
+				Updates the cash limit.
+			</summary>
+			<param name="merchantId">The merchant identifier.</param>
+			<param name="model">The model.</param>
+		</member>
+		<member name="M:FinoBank.Cola.Api.Controllers.MerchantController.Delete(System.Int32)">
+			<summary>
+				Deletes the specified identifier.
+			</summary>
+			<param name="id">The identifier.</param>
+		</member>
+		<member name="T:FinoBank.Cola.Api.Program">
+			<summary>
+				Program entry point
+			</summary>
+		</member>
+		<member name="M:FinoBank.Cola.Api.Program.Main(System.String[])">
+			<summary>
+				Defines the entry point of the application.
+			</summary>
+			<param name="args">The arguments.</param>
+		</member>
+		<member name="M:FinoBank.Cola.Api.Program.BuildWebHost(System.String[])">
+			<summary>
+				Builds the web host.
+			</summary>
+			<param name="args">The arguments.</param>
+			<returns></returns>
+		</member>
+		<member name="T:FinoBank.Cola.Api.StartupKitApplicationStartup">
+			<summary>
+				StartupKitApplicationStartup module Startup
+			</summary>
+			<seealso cref="T:Contesto.V2.Core.Common.Api.Base.Startup" />
+		</member>
+		<member name="M:FinoBank.Cola.Api.StartupKitApplicationStartup.#ctor(Microsoft.AspNetCore.Hosting.IHostingEnvironment)">
+			<summary>
+				Initializes a new instance of the <see cref="T:FinoBank.Cola.Api.StartupKitApplicationStartup" /> class.
+			</summary>
+			<param name="env">The env.</param>
+		</member>
+		<member name="M:FinoBank.Cola.Api.StartupKitApplicationStartup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+			<summary>
+				Configures the services.
+			</summary>
+			<param name="services">The services.</param>
+			<returns></returns>
+		</member>
+		<member name="M:FinoBank.Cola.Api.StartupKitApplicationStartup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment,Microsoft.Extensions.Logging.ILoggerFactory)">
+			<summary>
+				Configures the specified application.
+			</summary>
+			<param name="app">The application.</param>
+			<param name="env">The env.</param>
+			<param name="loggerFactory">The logger factory.</param>
+		</member>
+		<member name="T:FinoBank.Cola.Web.Api.Controllers.SearchController">
+			<summary>
+				Search
+			</summary>
+			<seealso cref="T:Contesto.V2.Core.Common.Api.Base.BaseApiController" />
+			<seealso cref="T:Microsoft.AspNetCore.Mvc.ControllerBase" />
+		</member>
+		<member name="M:FinoBank.Cola.Web.Api.Controllers.SearchController.Search(FinoBank.Cola.Manager.ViewModels.MerchantSearchRequestViewModel)">
+			<summary>
+				Searches the specified mobile number.
+			</summary>
+			<param name="model">The model.</param>
+			<returns></returns>
+		</member>
+		<member name="T:FinoBank.Cola.Web.Api.Controllers.TransactionController">
+			<summary>
+				Transaction Request
+			</summary>
+			<seealso cref="T:Contesto.V2.Core.Common.Api.Base.BaseApiController" />
+		</member>
+		<member name="M:FinoBank.Cola.Web.Api.Controllers.TransactionController.GetCustomerAllTransactionRequestHistory(System.Int16,FinoBank.Cola.Manager.ViewModels.CustomerTransactionSummaryRequestViewModel)">
+			<summary>
+				Gets the customer all transaction request history.
+			</summary>
+			<param name="transactionStatusId">The transaction status identifier.</param>
+			<param name="model">The model.</param>
+			<returns></returns>
+		</member>
+		<member name="M:FinoBank.Cola.Web.Api.Controllers.TransactionController.GetMerchantAllTransactionRequestHistory(System.Int16,FinoBank.Cola.Manager.ViewModels.CustomerTransactionSummaryRequestViewModel)">
+			<summary>
+				Gets the merchant all transaction request history.
+			</summary>
+			<param name="transactionStatusId">The transaction status identifier.</param>
+			<param name="model">The model.</param>
+			<returns></returns>
+		</member>
+		<member name="M:FinoBank.Cola.Web.Api.Controllers.TransactionController.Post(System.String,FinoBank.Cola.Manager.ViewModels.TransactionViewModel)">
+			<summary>
+				Posts the specified mobile number.
+			</summary>
+			<param name="mobileNumber">The mobile number.</param>
+			<param name="model">The model.</param>
+		</member>
+		<member name="M:FinoBank.Cola.Web.Api.Controllers.TransactionController.Post(FinoBank.Cola.Manager.ViewModels.CustomerTransactionFeedbackViewModel)">
+			<summary>
+				Posts the specified mobile number.
+			</summary>
+			<param name="model">The model.</param>
+		</member>
+		<member name="M:FinoBank.Cola.Web.Api.Controllers.TransactionController.Put(System.Int64,FinoBank.Cola.Manager.ViewModels.TransactionStatusUpdateViewModel)">
+			<summary>
+				Puts the specified transaction request identifier.
+			</summary>
+			<param name="transactionId">The transaction identifier.</param>
+			<param name="model">The model.</param>
+		</member>
+	</members>
+</doc>

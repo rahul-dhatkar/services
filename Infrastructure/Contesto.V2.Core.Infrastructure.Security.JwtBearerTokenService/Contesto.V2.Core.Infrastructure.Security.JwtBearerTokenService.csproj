@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>2.0.1</Version>
+    <Authors>Dhiraj Gupta</Authors>
+    <Company>Fulcrum Worldwide</Company>
+    <PackageProjectUrl>https://git.fulcrumww.com/root/ContestoEnterpriseLibraries_V2</PackageProjectUrl>
+    <RepositoryUrl>https://git.fulcrumww.com/root/ContestoEnterpriseLibraries_V2</RepositoryUrl>
+    <RepositoryType>GitLab</RepositoryType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.60.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contesto.V2.Core.Infrastructures.Data\Contesto.V2.Core.Infrastructure.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Contesto.V2.Core.Common.Utility">
+      <HintPath>..\..\packages\Contesto.V2.Core.Common.Utility.2.0.1\lib\netstandard2.0\Contesto.V2.Core.Common.Utility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

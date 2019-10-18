@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>2.0.1</Version>
+    <PackageTags>Password, QueueManager,ServiceFactory,ServiceCollectionExtensions</PackageTags>
+    <PackageReleaseNotes>Below utilities classes
+1. PasswordHelper
+2. SecurityHelper
+3. UtilityHelper
+4. ServiceCollectionExtensions 
+5. IServiceFactory
+6. QueueManager</PackageReleaseNotes>
+    <Description>Contesto.V2.Core.Common.Utility is a library of miscellaneous utilities we have found to be useful in our real applications. Of course, we might have thrown in something cool just for fun. Most of these classes and functions are nothing new or reflect some radical new thought. They are just helper functions and libraries, which we found helpful from time to time.
+ 1. PasswordHelper – One-Way password
+2. SecurityHelper - Encrypt &amp; Decrypt String
+3. UtilityHelper - ContentType &amp; GetMimeTypes
+4. ServiceCollectionExtensions - Specifies the contract for a collection of service descriptors.
+5. IServiceFactory – Interface for implementation of ServiceFactory
+6. QueueManager (In-Memory thread-safe ConcurrentQueue class)
+
+ NOTE:- Requires NuGet 2.12 or higher.
+</Description>
+    <Copyright>@Fulcrum WorldWide</Copyright>
+    <PackageProjectUrl>https://git.fulcrumww.com/root/ContestoEnterpriseLibraries_V2</PackageProjectUrl>
+    <PackageId>Contesto.V2.Core.Common.Utility</PackageId>
+    <RepositoryUrl>https://git.fulcrumww.com/root/ContestoEnterpriseLibraries_V2</RepositoryUrl>
+    <RepositoryType>GitLab</RepositoryType>
+    <Authors>Dhiraj Gupta</Authors>
+    <Company>Fulcrum Worldwide</Company>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard2.0\CaseManagement.Core.Common.Utility.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CryptoHelper" Version="3.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Cryptography.Internal" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="2.1.1" />
+  </ItemGroup>
+
+</Project>

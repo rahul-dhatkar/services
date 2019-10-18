@@ -1,0 +1,81 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+<!--/-:cnd-->
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
+    <UserSecretsId>ebb5d988-4813-4a3d-98e5-135e8fe117c4</UserSecretsId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
+    <DocumentationFile></DocumentationFile>
+    <OutputPath>bin\netcoreapp2.1\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.Development.json">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Update="appsettings.json">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.4.0" />
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.6" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.6" />
+    <PackageReference Include="NetEscapades.AspNetCore.SecurityHeaders" Version="0.9.0" />
+    <PackageReference Include="Otp.NET" Version="1.2.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="4.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinoBank.Cola.Manager\FinoBank.Cola.Manager.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="AutoMapper.Extensions.Microsoft.DependencyInjection">
+      <HintPath>C:\Users\FWIN01969\.nuget\packages\automapper.extensions.microsoft.dependencyinjection\5.0.1\lib\netstandard2.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Contesto.V2.Core.Common.Api">
+      <HintPath>..\packages\contesto.v2.core.common.api\2.0.1\lib\netcoreapp2.1\Contesto.V2.Core.Common.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="Contesto.V2.Core.Common.Manager">
+      <HintPath>..\packages\Contesto.V2.Core.Common.Manager.2.0.1\lib\netstandard2.0\Contesto.V2.Core.Common.Manager.dll</HintPath>
+    </Reference>
+    <Reference Include="Contesto.V2.Core.Common.Utility">
+      <HintPath>..\packages\Contesto.V2.Core.Common.Utility.2.0.1\lib\netstandard2.0\Contesto.V2.Core.Common.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="Contesto.V2.Core.Common.ViewModel">
+      <HintPath>..\packages\Contesto.V2.Core.Common.ViewModel.2.0.1\lib\netstandard2.0\Contesto.V2.Core.Common.ViewModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Contesto.V2.Core.Infrastructure.ConfigurationService">
+      <HintPath>..\packages\contesto.v2.core.infrastructure.configurationservice\2.0.1\lib\netstandard2.0\Contesto.V2.Core.Infrastructure.ConfigurationService.dll</HintPath>
+    </Reference>
+    <Reference Include="Contesto.V2.Core.Infrastructure.Data">
+      <HintPath>..\packages\contesto.v2.core.infrastructure.data\2.0.0\lib\netstandard2.0\Contesto.V2.Core.Infrastructure.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Contesto.V2.Core.Infrastructure.LoggerService">
+      <HintPath>..\packages\contesto.v2.core.infrastructure.loggerservice\2.0.0\lib\netstandard2.0\Contesto.V2.Core.Infrastructure.LoggerService.dll</HintPath>
+    </Reference>
+    <Reference Include="Contesto.V2.Core.Infrastructure.NotificationService">
+      <HintPath>..\packages\contesto.v2.core.infrastructure.notificationservice\2.0.1\lib\netstandard2.0\Contesto.V2.Core.Infrastructure.NotificationService.dll</HintPath>
+    </Reference>
+    <Reference Include="Contesto.V2.Core.Infrastructure.Security.AntiForgeryService">
+      <HintPath>..\packages\contesto.v2.core.infrastructure.security.antiforgeryservice\2.0.1\lib\netstandard2.0\Contesto.V2.Core.Infrastructure.Security.AntiForgeryService.dll</HintPath>
+    </Reference>
+    <Reference Include="Contesto.V2.Core.Infrastructure.Security.JwtBearerTokenService">
+      <HintPath>..\packages\contesto.v2.core.infrastructure.security.jwtbearertokenservice\2.0.1\lib\netstandard2.0\Contesto.V2.Core.Infrastructure.Security.JwtBearerTokenService.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

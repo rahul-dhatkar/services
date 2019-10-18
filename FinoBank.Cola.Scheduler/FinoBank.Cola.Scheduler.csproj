@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!--/-:cnd-->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Shantanu\Projects\FinoBank\finobank\Services\FinoBank.Cola.Scheduler\FinoBank.Cola.Scheduler.xml</DocumentationFile>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Cofiguration\**" />
+    <EmbeddedResource Remove="Cofiguration\**" />
+    <None Remove="Cofiguration\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.3.1" />
+    <PackageReference Include="Autofac.Extras.Quartz" Version="4.2.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="Contesto.V2.Core.Common.Manager" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.1.1" />
+    <PackageReference Include="Quartz" Version="3.0.6" />
+    <PackageReference Include="Topshelf" Version="4.0.4.148-develop" />
+    <PackageReference Include="Topshelf.Autofac" Version="3.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinoBank.Cola.Manager\FinoBank.Cola.Manager.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Contesto.V2.Core.Infrastructure.ConfigurationService">
+      <HintPath>..\packages\contesto.v2.core.infrastructure.configurationservice\2.0.1\lib\netstandard2.0\Contesto.V2.Core.Infrastructure.ConfigurationService.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

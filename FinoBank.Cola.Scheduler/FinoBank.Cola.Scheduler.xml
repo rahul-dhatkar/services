@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FinoBank.Cola.Scheduler</name>
+    </assembly>
+    <members>
+        <member name="T:FinoBank.Cola.Scheduler.IOC.SchedulerContainer">
+            <summary>
+            dependency injection for Master manager
+            </summary>
+            <seealso cref="!:CaseManagement.Core.Common.Manager.Base.BaseManagerAutofacContainer" />
+        </member>
+        <member name="M:FinoBank.Cola.Scheduler.IOC.SchedulerContainer.Load(Autofac.ContainerBuilder)">
+            <summary>
+            Override to add registrations to the container.
+            </summary>
+            <param name="builder">The builder through which components can be
+            registered.</param>
+            <remarks>
+            Note that the ContainerBuilder parameter is unique to this module.
+            </remarks>
+        </member>
+        <member name="T:FinoBank.Cola.Scheduler.JobFactories.IocJobFactory">
+            <summary>
+            IocJobFactory
+            </summary>
+            <seealso cref="T:Quartz.Spi.IJobFactory" />
+        </member>
+        <member name="F:FinoBank.Cola.Scheduler.JobFactories.IocJobFactory._container">
+            <summary>
+            The factory
+            </summary>
+        </member>
+        <member name="M:FinoBank.Cola.Scheduler.JobFactories.IocJobFactory.#ctor(Autofac.IContainer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:FinoBank.Cola.Scheduler.JobFactories.IocJobFactory" /> class.
+            </summary>
+            <param name="container">The container.</param>
+        </member>
+        <member name="M:FinoBank.Cola.Scheduler.JobFactories.IocJobFactory.NewJob(Quartz.Spi.TriggerFiredBundle,Quartz.IScheduler)">
+            <summary>
+            Called by the scheduler at the time of the trigger firing, in order to
+            produce a <see cref="T:Quartz.IJob" /> instance on which to call Execute.
+            </summary>
+            <param name="bundle">The TriggerFiredBundle from which the <see cref="T:Quartz.IJobDetail" />
+            and other info relating to the trigger firing can be obtained.</param>
+            <param name="scheduler">a handle to the scheduler that is about to execute the job</param>
+            <returns>
+            the newly instantiated Job
+            </returns>
+            <remarks>
+            It should be extremely rare for this method to throw an exception -
+            basically only the case where there is no way at all to instantiate
+            and prepare the Job for execution.  When the exception is thrown, the
+            Scheduler will move all triggers associated with the Job into the
+            <see cref="F:Quartz.TriggerState.Error" /> state, which will require human
+            intervention (e.g. an application restart after fixing whatever
+            configuration problem led to the issue with instantiating the Job).
+            </remarks>
+            <throws>  SchedulerException if there is a problem instantiating the Job. </throws>
+        </member>
+        <member name="M:FinoBank.Cola.Scheduler.JobFactories.IocJobFactory.ReturnJob(Quartz.IJob)">
+            <summary>
+            Allows the job factory to destroy/cleanup the job if needed.
+            </summary>
+            <param name="job"></param>
+        </member>
+        <member name="M:FinoBank.Cola.Scheduler.Jobs.MyJob.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:FinoBank.Cola.Scheduler.Jobs.MyJob" /> class.
+            </summary>
+        </member>
+        <member name="T:FinoBank.Cola.Scheduler.QuartzManager">
+            <summary>
+            Quartz Manager
+            </summary>
+        </member>
+        <member name="F:FinoBank.Cola.Scheduler.QuartzManager._scheduler">
+            <summary>
+            The scheduler
+            </summary>
+        </member>
+        <member name="P:FinoBank.Cola.Scheduler.QuartzManager.Scheduler">
+            <summary>
+            Gets the scheduler.
+            </summary>
+            <value>
+            The scheduler.
+            </value>
+        </member>
+        <member name="P:FinoBank.Cola.Scheduler.QuartzManager.Instance">
+            <summary>
+            Singleton
+            </summary>
+        </member>
+        <member name="M:FinoBank.Cola.Scheduler.QuartzManager.#ctor">
+            <summary>
+            Prevents a default instance of the <see cref="T:FinoBank.Cola.Scheduler.QuartzManager"/> class from being created.
+            </summary>
+        </member>
+        <member name="M:FinoBank.Cola.Scheduler.QuartzManager.Init">
+            <summary>
+            Initializes this instance.
+            </summary>
+        </member>
+        <member name="M:FinoBank.Cola.Scheduler.QuartzManager.UseJobFactory(Quartz.Spi.IJobFactory)">
+            <summary>
+            Uses the job factory.
+            </summary>
+            <param name="jobFactory">The job factory.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FinoBank.Cola.Scheduler.QuartzManager.AddJob``1(System.String,System.String,System.Int32)">
+            <summary>
+            Adds the job.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="name">The name.</param>
+            <param name="group">The group.</param>
+            <param name="interval">The interval.</param>
+            <returns></returns>
+        </member>
+        <member name="M:FinoBank.Cola.Scheduler.QuartzManager.Start">
+            <summary>
+            Starts this instance.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:FinoBank.Cola.Scheduler.ThreadIntervalConfigurationInMinutes">
+            <summary>
+            Thread Interval Configuration In Minutes
+            </summary>
+        </member>
+        <member name="P:FinoBank.Cola.Scheduler.ThreadIntervalConfigurationInMinutes.ArbitratorAssignment">
+            <summary>
+            Gets or sets the arbitrator assignment.
+            </summary>
+            <value>
+            The arbitrator assignment.
+            </value>
+        </member>
+        <member name="P:FinoBank.Cola.Scheduler.ThreadIntervalConfigurationInMinutes.CaseNotifications">
+            <summary>
+            Gets or sets the case notifications.
+            </summary>
+            <value>
+            The case notifications.
+            </value>
+        </member>
+    </members>
+</doc>

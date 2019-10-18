@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!--/-:cnd-->
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.6.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.2.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinoBank.Cola.Repository\FinoBank.Cola.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Contesto.V2.Core.Infrastructure.Data">
+      <HintPath>..\packages\contesto.v2.core.infrastructure.data\2.0.0\lib\netstandard2.0\Contesto.V2.Core.Infrastructure.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

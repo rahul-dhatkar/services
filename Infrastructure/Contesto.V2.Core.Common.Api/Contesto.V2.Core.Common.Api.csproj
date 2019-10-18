@@ -1,0 +1,62 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>2.0.1</Version>
+    <Description>Contesto.V2.Core.Common.Api is a NuGet library that you can add in to your ASP.NET Web API. 
+This will enable below features
+&gt; Provides information about the web hosting environment an application is running.
+&gt; Swagger UI ("https://swagger.io")  
+&gt; ConfigurationReader - Keep application configuration in database.
+&gt; NotificationService - Email notification engine along with email template builder.
+&gt; MemoryCache - In-memory cache engine
+&gt; Build-in Security
+    - CORS
+    - Anti Forgery Token (XSRF) - An attribute that causes validation of antiforgery tokens for all unsafe HTTP       methods. An antiforgery token is required for HTTP methods other than GET, HEAD, OPTIONS, and TRACE.
+   - OAuth 2.0 Claim
+   - JwtBearerTokens validation</Description>
+    <Copyright></Copyright>
+    <PackageTags>StartUp, BaseControler, Asp.NET Web API,OAuth 2.0 Claim</PackageTags>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageProjectUrl>https://git.fulcrumww.com/root/ContestoEnterpriseLibraries_V2</PackageProjectUrl>
+    <RepositoryUrl>https://git.fulcrumww.com/root/ContestoEnterpriseLibraries_V2</RepositoryUrl>
+    <RepositoryType>GitLab</RepositoryType>
+    <PackageReleaseNotes>List of classes
+- BaseApiController
+- Startup</PackageReleaseNotes>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG;netstandard2.0</DefineConstants>
+    <DocumentationFile>bin\Debug\netcoreapp2.1\CaseManagement.Core.Common.Api.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Dtos\**" />
+    <EmbeddedResource Remove="Dtos\**" />
+    <None Remove="Dtos\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="4.3.1" />
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="FluentValidation" Version="8.0.100" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.6" />
+    <PackageReference Include="NetEscapades.AspNetCore.SecurityHeaders" Version="0.9.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="1.1.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Contesto.V2.Core.Common.Utility\Contesto.V2.Core.Common.Utility.csproj" />
+    <ProjectReference Include="..\Contesto.V2.Core.Infrastructure.CachingService\Contesto.V2.Core.Infrastructure.CachingService.csproj" />
+    <ProjectReference Include="..\Contesto.V2.Core.Infrastructure.ConfigurationService\Contesto.V2.Core.Infrastructure.ConfigurationService.csproj" />
+    <ProjectReference Include="..\Contesto.V2.Core.Infrastructure.LoggerService\Contesto.V2.Core.Infrastructure.LoggerService.csproj" />
+    <ProjectReference Include="..\Contesto.V2.Core.Infrastructure.Security.AntiForgeryTokenService\Contesto.V2.Core.Infrastructure.Security.AntiForgeryService.csproj" />
+    <ProjectReference Include="..\Contesto.V2.Core.Infrastructure.Security.JwtBearerTokenService\Contesto.V2.Core.Infrastructure.Security.JwtBearerTokenService.csproj" />
+  </ItemGroup>
+
+</Project>

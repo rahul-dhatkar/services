@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!--/-:cnd-->
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <DebugType>Full</DebugType>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="Faker.NETCore" Version="1.0.1" />
+    <PackageReference Include="FluentValidation.Validators.UnitTestExtension" Version="1.2.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.2" />
+    <PackageReference Include="Moq" Version="4.8.3" />
+    <PackageReference Include="MSTest.TestAdapter" Version="1.3.2" />
+    <PackageReference Include="MSTest.TestFramework" Version="1.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FinoBank.Cola.Manager\FinoBank.Cola.Manager.csproj" />
+    <ProjectReference Include="..\FinoBank.Cola.Repository\FinoBank.Cola.Repository.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Contesto.V2.Core.Common.Manager">
+      <HintPath>..\packages\contesto.v2.core.common.manager\2.0.1\lib\netstandard2.0\Contesto.V2.Core.Common.Manager.dll</HintPath>
+    </Reference>
+    <Reference Include="Contesto.V2.Core.Common.ViewModel">
+      <HintPath>..\packages\contesto.v2.core.common.viewmodel\2.0.1\lib\netstandard2.0\Contesto.V2.Core.Common.ViewModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Contesto.V2.Core.Infrastructure.Data">
+      <HintPath>..\packages\contesto.v2.core.infrastructure.data\2.0.0\lib\netstandard2.0\Contesto.V2.Core.Infrastructure.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
+  </ItemGroup>
+
+</Project>

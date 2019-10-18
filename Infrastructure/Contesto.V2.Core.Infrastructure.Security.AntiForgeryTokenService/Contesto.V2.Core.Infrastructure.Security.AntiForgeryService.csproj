@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>CaseManagement.Core.Infrastructure.Security.AntiForgeryToken</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>2.0.1</Version>
+    <PackageProjectUrl>https://git.fulcrumww.com/root/ContestoEnterpriseLibraries_V2</PackageProjectUrl>
+    <RepositoryUrl>https://git.fulcrumww.com/root/ContestoEnterpriseLibraries_V2</RepositoryUrl>
+    <RepositoryType>GitLab</RepositoryType>
+    <Authors>Dhiraj Gupta</Authors>
+    <Company>Fulcrum Worldwide</Company>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Antiforgery" Version="2.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.1.2" />
+  </ItemGroup>
+
+</Project>

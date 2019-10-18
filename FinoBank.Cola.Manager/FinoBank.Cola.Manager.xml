@@ -1,0 +1,323 @@
+<?xml version="1.0"?>
+<doc>
+	<assembly>
+		<name>FinoBank.Cola.Manager</name>
+	</assembly>
+	<members>
+		<member name="T:FinoBank.Cola.Manager.CommandSampleManagerService">
+			<summary>
+				Command Master Manager Service
+			</summary>
+			<seealso cref="T:Contesto.V2.Core.Common.Manager.Base.BaseManager" />
+			<seealso cref="T:FinoBank.Cola.Manager.Interfaces.ICommandSampleManagerService" />
+		</member>
+		<member name="M:FinoBank.Cola.Manager.CommandSampleManagerService.#ctor(AutoMapper.IMapper,FinoBank.Cola.Repository.Uom.Interfaces.IUnitOfWork)">
+			<summary>
+				Initializes a new instance of the <see cref="T:FinoBank.Cola.Manager.CommandSampleManagerService" /> class.
+			</summary>
+			<param name="mapper">The mapper.</param>
+			<param name="startupKitUnitOfWork">The master unit of work.</param>
+		</member>
+		<member name="M:FinoBank.Cola.Manager.CommandSampleManagerService.CreateStartupKit(FinoBank.Cola.Manager.ViewModels.SampleViewModel)">
+			<summary>
+				Creates the startup kit.
+			</summary>
+			<param name="model">The model.</param>
+			<returns></returns>
+		</member>
+		<member name="M:FinoBank.Cola.Manager.CommandSampleManagerService.UpdateStartupKit(FinoBank.Cola.Manager.ViewModels.SampleViewModel)">
+			<summary>
+				Updates the startup kit.
+			</summary>
+			<param name="model">The model.</param>
+			<returns></returns>
+		</member>
+		<member name="T:FinoBank.Cola.Manager.Helpers.ValidationMessageHelper">
+			<summary>
+				Validation Message Helper
+			</summary>
+		</member>
+		<member name="T:FinoBank.Cola.Manager.Interfaces.ICommandSampleManagerService">
+			<summary>
+				Command interface for Startup Kit Manager Service
+			</summary>
+		</member>
+		<member name="M:FinoBank.Cola.Manager.Interfaces.ICommandSampleManagerService.CreateStartupKit(FinoBank.Cola.Manager.ViewModels.SampleViewModel)">
+			<summary>
+				Creates the master.
+			</summary>
+			<param name="model">The model.</param>
+			<returns></returns>
+		</member>
+		<member name="M:FinoBank.Cola.Manager.Interfaces.ICommandSampleManagerService.UpdateStartupKit(FinoBank.Cola.Manager.ViewModels.SampleViewModel)">
+			<summary>
+				Updates the master.
+			</summary>
+			<param name="model">The model.</param>
+			<returns></returns>
+		</member>
+		<member name="T:FinoBank.Cola.Manager.Interfaces.IQueryMerchantSearchManagerService">
+			<summary>
+				Interface Query Merchant Search Manager Service
+			</summary>
+		</member>
+		<member name="M:FinoBank.Cola.Manager.Interfaces.IQueryMerchantSearchManagerService.MerchantSearchDataWithPagingAsync(FinoBank.Cola.Repository.DomainModels.MerchantSearchRequestDomainModel)">
+			<summary>
+				Gets the merchants with paging.
+			</summary>
+			<param name="model">The model.</param>
+			<returns></returns>
+		</member>
+		<member name="T:FinoBank.Cola.Manager.Interfaces.IQuerySampleManagerService">
+			<summary>
+				Interface Query StartupKit Manager Service
+			</summary>
+		</member>
+		<member name="M:FinoBank.Cola.Manager.Interfaces.IQuerySampleManagerService.GetStartupKitById(System.Int32)">
+			<summary>
+				Gets the startup kit by identifier.
+			</summary>
+			<param name="id">The identifier.</param>
+			<returns></returns>
+		</member>
+		<member name="M:FinoBank.Cola.Manager.Interfaces.IQuerySampleManagerService.GetStartupKitSummary(FinoBank.Cola.Manager.ViewModels.SampleSummaryRequestViewModel)">
+			<summary>
+				Gets the startup kit summary.
+			</summary>
+			<param name="model">The model.</param>
+			<returns></returns>
+		</member>
+		<member name="M:FinoBank.Cola.Manager.Interfaces.IQuerySampleManagerService.GetStartupKitSummaryByTypeId(FinoBank.Cola.Manager.ViewModels.SampleSummaryRequestViewModel)">
+			<summary>
+				Gets the startup kit summary by type identifier.
+			</summary>
+			<param name="model">The model.</param>
+			<returns></returns>
+		</member>
+		<member name="M:FinoBank.Cola.Manager.Interfaces.IQuerySampleManagerService.GetStartupKits(System.String)">
+			<summary>
+				Gets the startup kits.
+			</summary>
+			<param name="searchText">The search text.</param>
+			<returns></returns>
+		</member>
+		<member name="T:FinoBank.Cola.Manager.IOC.ManagerContainer">
+			<summary>
+				dependency injection for Master manager
+			</summary>
+			<seealso cref="T:Contesto.V2.Core.Common.Manager.Ioc.BaseManagerAutofacContainer" />
+		</member>
+		<member name="M:FinoBank.Cola.Manager.IOC.ManagerContainer.Load(Autofac.ContainerBuilder)">
+			<summary>
+				Override to add registrations to the container.
+			</summary>
+			<param name="builder">
+				The builder through which components can be
+				registered.
+			</param>
+			<remarks>
+				Note that the ContainerBuilder parameter is unique to this module.
+			</remarks>
+		</member>
+		<member name="T:FinoBank.Cola.Manager.Mappers.ModelsAutoMapper">
+			<summary>
+				Master models auto mapper configuration
+			</summary>
+			<seealso cref="T:Contesto.V2.Core.Common.Manager.Base.BaseAutoMapper" />
+		</member>
+		<member name="M:FinoBank.Cola.Manager.Mappers.ModelsAutoMapper.#ctor">
+			<summary>
+				Initializes a new instance of the <see cref="T:FinoBank.Cola.Manager.Mappers.ModelsAutoMapper" /> class.
+			</summary>
+		</member>
+		<member name="T:FinoBank.Cola.Manager.QueryMerchantSearchManagerService">
+			<summary>
+				Query Startup Kit ManagerService
+			</summary>
+			<seealso cref="T:Contesto.V2.Core.Common.Manager.Base.BaseManager" />
+			<seealso cref="T:FinoBank.Cola.Manager.Interfaces.IQuerySampleManagerService" />
+		</member>
+		<member name="M:FinoBank.Cola.Manager.QueryMerchantSearchManagerService.#ctor(AutoMapper.IMapper,Microsoft.Extensions.Caching.Memory.IMemoryCache,FinoBank.Cola.Repository.Uom.Interfaces.IUnitOfWork)">
+			<summary>
+				Initializes a new instance of the <see cref="T:FinoBank.Cola.Manager.QuerySampleManagerService" /> class.
+			</summary>
+			<param name="mapper">The mapper.</param>
+			<param name="cache">The cache.</param>
+			<param name="startupKitUnitOfWork">The startup kit unit of work.</param>
+		</member>
+		<member name="T:FinoBank.Cola.Manager.QuerySampleManagerService">
+			<summary>
+				Query Startup Kit ManagerService
+			</summary>
+			<seealso cref="T:Contesto.V2.Core.Common.Manager.Base.BaseManager" />
+			<seealso cref="T:FinoBank.Cola.Manager.Interfaces.IQuerySampleManagerService" />
+		</member>
+		<member name="M:FinoBank.Cola.Manager.QuerySampleManagerService.#ctor(AutoMapper.IMapper,Microsoft.Extensions.Caching.Memory.IMemoryCache,FinoBank.Cola.Repository.Uom.Interfaces.IUnitOfWork)">
+			<summary>
+				Initializes a new instance of the <see cref="T:FinoBank.Cola.Manager.QuerySampleManagerService" /> class.
+			</summary>
+			<param name="mapper">The mapper.</param>
+			<param name="cache">The cache.</param>
+			<param name="startupKitUnitOfWork">The startup kit unit of work.</param>
+		</member>
+		<member name="M:FinoBank.Cola.Manager.QuerySampleManagerService.GetStartupKitById(System.Int32)">
+			<summary>
+				Gets the master by identifier.
+			</summary>
+			<param name="id">The identifier.</param>
+			<returns></returns>
+		</member>
+		<member name="M:FinoBank.Cola.Manager.QuerySampleManagerService.GetStartupKits(System.String)">
+			<summary>
+				Gets the startup kits.
+			</summary>
+			<param name="searchText">The search text.</param>
+			<returns></returns>
+		</member>
+		<member name="M:FinoBank.Cola.Manager.QuerySampleManagerService.GetStartupKitSummary(FinoBank.Cola.Manager.ViewModels.SampleSummaryRequestViewModel)">
+			<summary>
+				Gets the startup kit summary.
+			</summary>
+			<param name="model">The model.</param>
+			<returns></returns>
+		</member>
+		<member name="M:FinoBank.Cola.Manager.QuerySampleManagerService.GetStartupKitSummaryByTypeId(FinoBank.Cola.Manager.ViewModels.SampleSummaryRequestViewModel)">
+			<summary>
+				Gets the startup kit summary by type identifier.
+			</summary>
+			<param name="model">The model.</param>
+			<returns></returns>
+		</member>
+		<member name="T:FinoBank.Cola.Manager.ViewModels.CustomerTransactionSummaryRequestViewModel">
+			<summary>
+				Master Summary Request ViewModel
+			</summary>
+			<seealso cref="T:Contesto.V2.Core.Common.Manager.Base.BaseGridPagingViewModel" />
+		</member>
+		<member name="P:FinoBank.Cola.Manager.ViewModels.CustomerTransactionSummaryRequestViewModel.RefCode">
+			<summary>
+				Gets or sets the reference code.
+			</summary>
+			<value>
+				The reference code.
+			</value>
+		</member>
+		<member name="P:FinoBank.Cola.Manager.ViewModels.CustomerTransactionSummaryRequestViewModel.Type">
+			<summary>
+				Gets or sets the type.
+			</summary>
+			<value>
+				The type.
+			</value>
+		</member>
+		<member name="P:FinoBank.Cola.Manager.ViewModels.CustomerTransactionSummaryRequestViewModel.Mobile">
+			<summary>
+				Gets or sets the mobile.
+			</summary>
+			<value>
+				The mobile.
+			</value>
+		</member>
+		<member name="P:FinoBank.Cola.Manager.ViewModels.CustomerTransactionSummaryRequestViewModel.TransactionStatusId">
+			<summary>
+				Gets or sets the transaction status identifier.
+			</summary>
+			<value>
+				The transaction status identifier.
+			</value>
+		</member>
+		<member name="T:FinoBank.Cola.Manager.ViewModels.MerchantSummaryResultViewModel">
+			<summary>
+				Master Summary Result ViewModel
+			</summary>
+			<seealso cref="!:BaseSummaryResultViewModel&lt;List&lt;SampleViewModel&gt;&gt;" />
+		</member>
+		<member name="T:FinoBank.Cola.Manager.ViewModels.MerchantTransactionSummaryRequestViewModel">
+			<summary>
+				Master Summary Request ViewModel
+			</summary>
+			<seealso cref="T:Contesto.V2.Core.Common.Manager.Base.BaseGridPagingViewModel" />
+		</member>
+		<member name="P:FinoBank.Cola.Manager.ViewModels.MerchantTransactionSummaryRequestViewModel.MerchantId">
+			<summary>
+				Gets or sets the type.
+			</summary>
+			<value>
+				The type.
+			</value>
+		</member>
+		<member name="P:FinoBank.Cola.Manager.ViewModels.MerchantTransactionSummaryRequestViewModel.StatusId">
+			<summary>
+				Gets or sets the status identifier.
+			</summary>
+			<value>
+				The status identifier.
+			</value>
+		</member>
+		<member name="T:FinoBank.Cola.Manager.ViewModels.SampleCommandSuccessResultViewModel">
+			<summary>
+				Master Success Result ViewModel
+			</summary>
+			<seealso cref="!:BaseCommandSuccessResultViewModel&lt;System.Int32&gt;" />
+		</member>
+		<member name="T:FinoBank.Cola.Manager.ViewModels.SampleSummaryRequestViewModel">
+			<summary>
+				Master Summary Request ViewModel
+			</summary>
+			<seealso cref="T:Contesto.V2.Core.Common.Manager.Base.BaseGridPagingViewModel" />
+		</member>
+		<member name="P:FinoBank.Cola.Manager.ViewModels.SampleSummaryRequestViewModel.TypeId">
+			<summary>
+				Gets or sets the master type identifier.
+			</summary>
+			<value>
+				The master type identifier.
+			</value>
+		</member>
+		<member name="T:FinoBank.Cola.Manager.ViewModels.SampleSummaryResultViewModel">
+			<summary>
+				Master Summary Result ViewModel
+			</summary>
+			<seealso cref="!:BaseSummaryResultViewModel&lt;List&lt;SampleViewModel&gt;&gt;" />
+		</member>
+		<member name="T:FinoBank.Cola.Manager.ViewModels.SampleViewModel">
+			<summary>
+				Master ViewModel
+			</summary>
+			<seealso cref="!:BaseMasterViewModel&lt;System.Int32&gt;" />
+		</member>
+		<member name="P:FinoBank.Cola.Manager.ViewModels.SampleViewModel.TypeId">
+			<summary>
+				Gets or sets the master type identifier.
+			</summary>
+			<value>
+				The master type identifier.
+			</value>
+		</member>
+		<member name="P:FinoBank.Cola.Manager.ViewModels.SampleViewModel.Description">
+			<summary>
+				Gets or sets the description.
+			</summary>
+			<value>
+				The description.
+			</value>
+		</member>
+		<member name="T:FinoBank.Cola.Manager.ViewModels.TransactionSummaryResultViewModel">
+			<summary>
+				Master Summary Result ViewModel
+			</summary>
+			<seealso cref="!:Contesto.V2.Core.Common.Manager.Base.BaseSummaryResultViewModel&lt;System.Collections.Generic.List&lt;FinoBank.Cola.Manager.ViewModels.TransactionHistoryViewModel&gt;&gt;" />
+		</member>
+		<member name="T:FinoBank.Cola.Manager.ViewModelValidators.SampleViewModelValidation">
+			<summary>
+				Master ViewModel Validation
+			</summary>
+			<seealso cref="T:FluentValidation.AbstractValidator`1" />
+		</member>
+		<member name="M:FinoBank.Cola.Manager.ViewModelValidators.SampleViewModelValidation.#ctor">
+			<summary>
+				Initializes a new instance of the <see cref="T:FinoBank.Cola.Manager.ViewModelValidators.SampleViewModelValidation" /> class.
+			</summary>
+		</member>
+	</members>
+</doc>

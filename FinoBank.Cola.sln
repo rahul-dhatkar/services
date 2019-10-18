@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "001 Apis", "001 Apis", "{55BE56FB-9AC1-4317-A981-6D5EA9C04CB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "002 Managers", "002 Managers", "{7220822B-93EC-40A5-A356-DA87A7D61341}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "003 Resources", "003 Resources", "{A02EC9CE-6B17-40BD-A3FC-1ACB64A0A820}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "004 WindowsServices", "004 WindowsServices", "{EB3391BA-35B1-4E4E-BB59-BC910C92C627}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "005 Databases", "005 Databases", "{1D648A1A-1E20-43D3-BD49-EB2FA316146A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "006 UnitTestings", "006 UnitTestings", "{4B4656B3-527F-47B2-9C79-0038D20F612C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "007 IntegrationTestings", "007 IntegrationTestings", "{8D58B2AA-A2AB-40A2-9BDF-1609F782FE0C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8BB01768-F1A1-49D5-B142-0364AF6C4F6E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinoBank.Cola.Api", "FinoBank.Cola.Api\FinoBank.Cola.Api.csproj", "{AEC19449-7B94-465A-970C-05A46E4A6E9E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinoBank.Cola.Manager", "FinoBank.Cola.Manager\FinoBank.Cola.Manager.csproj", "{15A9D928-FAAD-49B7-878A-1B1D58EDF399}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinoBank.Cola.Repository", "FinoBank.Cola.Repository\FinoBank.Cola.Repository.csproj", "{0E5F76C0-8AC4-474D-8731-6CA16F338EBC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinoBank.Cola.Manager.UnitTests", "FinoBank.Cola.Manager.UnitTests\FinoBank.Cola.Manager.UnitTests.csproj", "{C0E00333-1D14-4238-AED3-170BF9378AE6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinoBank.Cola.Repository.UnitTests", "FinoBank.Cola.Repository.UnitTests\FinoBank.Cola.Repository.UnitTests.csproj", "{86A4146E-BB42-460D-9CF3-15EC8559964B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinoBank.Cola.WindowsService", "FinoBank.Cola.WindowsService\FinoBank.Cola.WindowsService.csproj", "{072C7B33-5B83-419F-B15A-65F424826FCC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEC19449-7B94-465A-970C-05A46E4A6E9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEC19449-7B94-465A-970C-05A46E4A6E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEC19449-7B94-465A-970C-05A46E4A6E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEC19449-7B94-465A-970C-05A46E4A6E9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15A9D928-FAAD-49B7-878A-1B1D58EDF399}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A9D928-FAAD-49B7-878A-1B1D58EDF399}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A9D928-FAAD-49B7-878A-1B1D58EDF399}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A9D928-FAAD-49B7-878A-1B1D58EDF399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E5F76C0-8AC4-474D-8731-6CA16F338EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E5F76C0-8AC4-474D-8731-6CA16F338EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E5F76C0-8AC4-474D-8731-6CA16F338EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E5F76C0-8AC4-474D-8731-6CA16F338EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0E00333-1D14-4238-AED3-170BF9378AE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0E00333-1D14-4238-AED3-170BF9378AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0E00333-1D14-4238-AED3-170BF9378AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0E00333-1D14-4238-AED3-170BF9378AE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86A4146E-BB42-460D-9CF3-15EC8559964B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86A4146E-BB42-460D-9CF3-15EC8559964B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86A4146E-BB42-460D-9CF3-15EC8559964B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86A4146E-BB42-460D-9CF3-15EC8559964B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{072C7B33-5B83-419F-B15A-65F424826FCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{072C7B33-5B83-419F-B15A-65F424826FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{072C7B33-5B83-419F-B15A-65F424826FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{072C7B33-5B83-419F-B15A-65F424826FCC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AEC19449-7B94-465A-970C-05A46E4A6E9E} = {55BE56FB-9AC1-4317-A981-6D5EA9C04CB1}
+		{15A9D928-FAAD-49B7-878A-1B1D58EDF399} = {7220822B-93EC-40A5-A356-DA87A7D61341}
+		{0E5F76C0-8AC4-474D-8731-6CA16F338EBC} = {A02EC9CE-6B17-40BD-A3FC-1ACB64A0A820}
+		{C0E00333-1D14-4238-AED3-170BF9378AE6} = {4B4656B3-527F-47B2-9C79-0038D20F612C}
+		{86A4146E-BB42-460D-9CF3-15EC8559964B} = {8D58B2AA-A2AB-40A2-9BDF-1609F782FE0C}
+		{072C7B33-5B83-419F-B15A-65F424826FCC} = {EB3391BA-35B1-4E4E-BB59-BC910C92C627}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F852224-FB6F-440A-B44E-76134E88F49E}
+	EndGlobalSection
+EndGlobal
